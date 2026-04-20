@@ -101,7 +101,7 @@ async function startServer() {
       res.sendFile(path.join(process.cwd(), "fillout.html"));
     });
 
-    app.get("*", (req, res) => {
+    app.get("/{*splat}", (req, res) => {
       res.sendFile(path.join(distPath, "index.html"));
     });
   }
